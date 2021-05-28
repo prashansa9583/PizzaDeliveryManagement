@@ -53,6 +53,26 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Microproject.accdb")>  _
+        Public ReadOnly Property MicroprojectConnectionString() As String
+            Get
+                Return CType(Me("MicroprojectConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Project.accdb")>  _
+        Public ReadOnly Property ProjectConnectionString() As String
+            Get
+                Return CType(Me("ProjectConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
